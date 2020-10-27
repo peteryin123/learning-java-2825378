@@ -2,36 +2,27 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String args[]) {
-        String question = "What is the largest planet in our solar system?";
-        String choiceOne = "earth";
-        String choiceTwo = "jupiter";
-        String choiceThree = "saturn";
+    public static void main(String[] args) {
+        String question = "What is Goku's signature attack?";
+        String choiceOne = "Masenko";
+        String choiceTwo = "Kamehameha";
+        String choiceThree = "Final Flash";
 
         String correctAnswer = choiceTwo;
 
-        // Write a print statement asking the question
         System.out.println(question);
+        System.out.println("Select one of the following:");
+        System.out.println(choiceOne);
+        System.out.println(choiceTwo);
+        System.out.println(choiceThree);
 
-        // Write a print statement giving the answer choices
-        System.out.println("Choose one of the following: " +
-                choiceOne + ", " + choiceTwo + ", or " + choiceThree + ".");
+        Scanner input = new Scanner(System.in);
+        String answer = input.next();
 
-        // Have the user input an answer
-        Scanner scanner = new Scanner(System.in);
-        // Retrieve the user's input
-        String input = scanner.next();
-
-        // If the user's input matches the correctAnswer...
-        // then the user is correct and we want to print out a congrats message to the user.
-        if(correctAnswer.equals(input.toLowerCase())) {
-            System.out.println("Congrats! That's the correct answer");
+        if(answer.equals(correctAnswer)) {
+            System.out.println("You are correct! Congratulations!");
         } else {
-            System.out.println("You are incorrect. The correct answer is " + correctAnswer);
+            System.out.println("You are incorrect! The correct answer is " + correctAnswer + ".");
         }
-        // If the user's input does not match the correctAnswer...
-        // then the user is incorrect and we want to print out a message saying that the user is incorrect as well as what the correct choice was.
-
     }
-
 }
