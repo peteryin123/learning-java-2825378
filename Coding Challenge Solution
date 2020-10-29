@@ -1,0 +1,19 @@
+public class Main {
+
+    public static double salaryCalculator(double hours, double wages, double vacationDays) {
+
+        if (hours < 0 || wages < 0) {
+            return -1;
+        }
+
+        double weeklyWages = hours * wages;
+        double unpaidVacation = vacationDays * 8 * wages;
+        return (weeklyWages * 52) - unpaidVacation;
+
+    }
+
+    public static void main(String[] args) {
+        double yearlySalary = salaryCalculator(40,50,0);
+        System.out.print(yearlySalary);
+    }
+}
